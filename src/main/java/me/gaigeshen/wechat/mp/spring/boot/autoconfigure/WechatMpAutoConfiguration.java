@@ -60,7 +60,7 @@ public class WechatMpAutoConfiguration {
   }
 
   @Bean(destroyMethod = "close")
-  public RequestExecutor wechatRequestExecutor(Config config) {
+  public RequestExecutor wechatMpRequestExecutor(Config config) {
     WechatMpProperties.Http http = properties.getHttp();
     HttpClientExecutor httpclient = new HttpClientExecutor(
             http.getConnectionRequestTimeout(), http.getConnectTimeout(), http.getSocketTimeout());
@@ -68,7 +68,7 @@ public class WechatMpAutoConfiguration {
   }
 
   @Bean
-  public Config wechatConfig() {
+  public Config wechatMpConfig() {
     String appid = properties.getAppid();
     String secret = properties.getSecret();
     String token = properties.getToken();
