@@ -8,9 +8,11 @@ import me.gaigeshen.wechat.mp.jssdk.JsApiSignatureCalculator;
 import me.gaigeshen.wechat.mp.message.DefaultMessageProcessorChain;
 import me.gaigeshen.wechat.mp.message.MessageProcessor;
 import me.gaigeshen.wechat.mp.message.MessageProcessorChain;
+import me.gaigeshen.wechat.mp.message.ServletMessageFilter;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,6 +28,7 @@ import java.util.Map;
  */
 @Configuration
 @EnableConfigurationProperties(WechatMpProperties.class)
+@ServletComponentScan(basePackageClasses = { ServletMessageFilter.class })
 public class WechatMpAutoConfiguration {
   private final WechatMpProperties properties;
 
