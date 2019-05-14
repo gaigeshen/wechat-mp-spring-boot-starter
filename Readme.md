@@ -9,7 +9,7 @@
 ```
 <dependency>
   <groupId>me.gaigeshen.wechat</groupId>
-  <artifactId>wechat-mp-spring-boot-starter-spring-boot-starter</artifactId>
+  <artifactId>wechat-mp-spring-boot-starter</artifactId>
   <version>${VERSION}</version>
 </dependency>
 ```
