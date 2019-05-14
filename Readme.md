@@ -1,4 +1,4 @@
-## 微信公众号开发工具自动配置，还在开发当中
+## 微信公众号开发工具自动配置
 [![License](http://img.shields.io/:license-apache-brightgreen.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![Build Status](https://travis-ci.org/gaigeshen/wechat-mp-spring-boot-starter.svg?branch=develop)](https://travis-ci.org/gaigeshen/wechat-mp-spring-boot-starter)
 [![Maven Central](https://img.shields.io/maven-central/v/me.gaigeshen.wechat/wechat-mp-spring-boot-starter.svg)](http://mvnrepository.com/artifact/me.gaigeshen.wechat/wechat-mp-spring-boot-starter)
