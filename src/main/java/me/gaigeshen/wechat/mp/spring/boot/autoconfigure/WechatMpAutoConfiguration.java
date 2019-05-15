@@ -38,14 +38,14 @@ public class WechatMpAutoConfiguration {
 
   // 卡券签名相关
   @Bean
-  @ConditionalOnProperty(prefix = WechatMpProperties.PREFIX, name = "enable-js-api")
+  @ConditionalOnProperty(prefix = WechatMpProperties.PREFIX, name = "enable-js-api", havingValue = "true")
   public CardSignatureCalculator cardSignatureCalculator(RequestExecutor executor) {
     return new CardSignatureCalculator(executor);
   }
 
   // 网页开发相关
   @Bean
-  @ConditionalOnProperty(prefix = WechatMpProperties.PREFIX, name = "enable-card")
+  @ConditionalOnProperty(prefix = WechatMpProperties.PREFIX, name = "enable-card", havingValue = "true")
   public JsApiSignatureCalculator jsApiSignatureCalculator(RequestExecutor executor) {
     return new JsApiSignatureCalculator(executor);
   }
