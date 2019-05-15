@@ -10,7 +10,6 @@ import me.gaigeshen.wechat.mp.message.MessageProcessor;
 import me.gaigeshen.wechat.mp.message.MessageProcessorChain;
 import me.gaigeshen.wechat.mp.message.ServletMessageFilter;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.ApplicationContext;
@@ -38,14 +37,12 @@ public class WechatMpAutoConfiguration {
 
   // 卡券签名相关
   @Bean
-  @ConditionalOnProperty(prefix = WechatMpProperties.PREFIX, name = "enable-js-api", havingValue = "true")
   public CardSignatureCalculator cardSignatureCalculator(RequestExecutor executor) {
     return new CardSignatureCalculator(executor);
   }
 
   // 网页开发相关
   @Bean
-  @ConditionalOnProperty(prefix = WechatMpProperties.PREFIX, name = "enable-card", havingValue = "true")
   public JsApiSignatureCalculator jsApiSignatureCalculator(RequestExecutor executor) {
     return new JsApiSignatureCalculator(executor);
   }

@@ -17,15 +17,6 @@ public class WechatMpProperties {
   private String token;
   private String encodingAesKey;
 
-  /**
-   * 如果需要网页开发，例如网页授权，需要开启此项
-   */
-  private boolean enableJsApi = false;
-  /**
-   * 如果需要卡券开发，需要开启此项
-   */
-  private boolean enableCard = false;
-
   private Http http = new Http();
 
   public static class Http {
@@ -83,22 +74,6 @@ public class WechatMpProperties {
 
   public void setEncodingAesKey(String encodingAesKey) {
     this.encodingAesKey = encodingAesKey;
-  }
-
-  public boolean isEnableJsApi() {
-    return enableJsApi;
-  }
-
-  public void setEnableJsApi(boolean enableJsApi) {
-    this.enableJsApi = enableJsApi;
-  }
-
-  public boolean isEnableCard() {
-    return enableCard;
-  }
-
-  public void setEnableCard(boolean enableCard) {
-    this.enableCard = enableCard;
   }
 
   public Http getHttp() {
